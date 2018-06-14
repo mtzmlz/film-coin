@@ -1,6 +1,5 @@
-# File Coin
 
-## Film funding (Premier)
+## Film funding (Premiere)
 
 ### Mecanica de sitio
 
