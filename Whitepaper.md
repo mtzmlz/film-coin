@@ -10,7 +10,9 @@ Los activos se liberarán de acuerdo al plan de liberación de los recursos que 
 
 En cada milestone, el productor tendrá que documentar y subir a la plataforma el avance de la película (disponible solo para los stakeholders *1). La plataforma avisará a los stakeholders del avance.
 
-* Los stakeholders antes de la premier son los compradores y los prestamistas.
+** Los stakeholders antes de la premier son los compradores y los prestamistas.
+
+El máximo monto para liberación de fondos será del 50% (prorrateado de acuerdo al plan de liberación de recursos). El restante 50% será liberado después de la premier. Esto creará 2 condiciones: La primera será que el productor tenderá a exagerar el presupuesto para poder financiarse por completo sin tener necesidad del 50% que se libera después de la premier (encareciendo el precio del boleto premier); La segunda será que el productor tendrá que buscar financiamiento alternativo.
 
 Después de cada milestone, los compradores tendrán opción para convocar a votación a cancelar el proyecto. Si existe consenso con respecto a cancelar el proyecto, los fondos que posea el smartcontract al momento de la cancelación serán distribuidos entre los compradores (esta opción solo estará disponible si el productor no solicitó un préstamo).
 
@@ -35,11 +37,7 @@ Después de cada milestone, los compradores tendrán opción para convocar a vot
 
 ### Premium
 
-El máximo monto para liberación de fondos será del 50%. El restante 50% será liberado después de la premier. Esto creará 2 condiciones: La primera será que el productor tenderá a exagerar el presupuesto para poder financiarse por completo sin tener necesidad del 50% que se libera después de la premier (encareciendo el precio del boleto premier); La segunda será que el productor tendrá que buscar financiamiento alternativo.
-
-El productor tendrá que pagar las reproducciones de Premier, Cinema y Home. Esto obtenieno la diferencia entre lo recaudado menos lo reproducido. En caso de que esta diferencia sea positiva, se restará lo reproducido a lo recaudado y esta diferencia será la ganancia del productor por bloque.
-
-Un premium de esto sería ofrecer una alternativa para financiamiento complementario con interés. Los productores podrán solicitar hasta un 50% del presupuesto. Los prestamistas (minimo 3) podrán prestar Eth a los productores bajo un interés.  El productor tendrá que pagar mes a mes el interes fijado a los prestamistas mas el porcentaje por el uso de la plataforma de prestamo, de no ser así los prestamistas podrán cancelar (previo consenso) el proyecto y se les devolvería el total de recursos restantes a todos los stakeholders ( >50% para los compradores y para los prestamistas sería menos pero ellos mismos tendrán que supervisar el proyecto para asegurar el avance y su pago con los fondos destinados a la premier).
+Un premium de esto sería ofrecer una alternativa para financiamiento complementario con interés. Los productores podrán solicitar hasta un 50% del presupuesto de la película (en cualquier momento del roadmap). Los prestamistas (minimo 3) podrán prestar Eth a los productores bajo un acuerdo de pago de intereses.  El productor tendrá que pagar mes a mes el interes fijado a los prestamistas más el porcentaje por el uso de la plataforma de prestamo, de no ser así los prestamistas podrán cancelar (previo consenso) el proyecto y se les devolvería el total de recursos restantes a todos los stakeholders ( >50% asegurado para los compradores y para los prestamistas sería menos pero ellos mismos tendrán que supervisar el proyecto para asegurar el avance y su pago con los fondos destinados a la premier).
 
 ### Ventajas de este esquema
 
@@ -51,20 +49,25 @@ Prestamistas podrán adquirir deuda a bajo riesgo y tazas de interés superiores
 
 Después del fundraise del film, los derechos de reproducción serán adquiridos con fiat o film-coin. Inicialmente los usuarios quedrán pagar con film-coin porque esa opción seria mas económico (con respecto al fiat, debido al precio inicial del film-coin)  pero con el tiempo al incrementar la demanda y haberla listado en varios exchanges, la paridad file-coin / eth tendría que apreciarse del lado de film-coin (por oferta y demanda).
 
-Cuando el usuario adquiera la película con fiat, esos fondos serán transferidos al productor menos los impuestos a pagar. Cuando el usuario adquiera la película con la opción de film-coin se hará una transferencia de la cartera del usuario a la cartera del productor menos 5% que se utilizarán para pagar fees a los mineros y fees de uso de plataforma.
+Cuando el usuario adquiera la película con fiat, esos fondos serán transferidos al productor menos los impuestos a pagar. Cuando el usuario adquiera la película con la opción de film-coin se hará una transferencia de la cartera del usuario a la cartera del productor (esto menos 5% que se utilizarán para pagar fees a los mineros).
+
+El productor tendrá que solventar los fees de las reproducciones de Premier, Cinema y Home. El total de ganancia se obtendrá con la diferencia entre lo recaudado menos lo reproducido. En caso de que esta diferencia sea positiva, se restará lo reproducido a lo recaudado y esta diferencia será la ganancia del productor por bloque.
 
 ## Minería
 
-La moneda de film-grid se minaría con espacio en disco duro y ancho de banda prestados. Las películas se almacenarán de manera encriptada y particionada en los discos duros de los mineros (posiblemente usando IPFS). El software de minería pagará con la moneda de film-grid cada vez que exista una petición y transacción de reproducción de ‘activo’ contenido en la maquina del minero.
+La moneda del sitio será film-coin. Se minará con espacio en disco duro y ancho de banda prestados. Las películas se almacenarán de manera encriptada y particionada en los discos duros de los mineros (posiblemente usando IPFS). El software de minería pagará con la moneda de film-grid cada vez que exista una petición y transacción de reproducción de ‘activo’ contenido en la maquina del minero.
 
 Los mineros no podrán escoger que activos hostear. Existirá una capa paralela al blockchain con el indice de:
-
 
 | film | particiones | mineros hosteando |
 | ---- | ----------- | ----------------- |
 | xxxx | xxxxxxxxxxx | xxxxxxxxxxxxxxxxx |
 
-El cliente de mineria deberá estar embebido en la aplicación de reproducción, así los usuarios podrán optar por prestar su ancho de banda y disco duro para hostear los archivos de los films y obtener film-coins. Estos mismos film-coins podrán ser utilizados para ver peliculas o incluso cambiarlos en algun exchange por fiat o alguna otra crypto-moneda
+Los mineros recibirán recompensa tipo coinbase y fees. Las recompensas tipo coinbase serán dadas por la plataforma, los fees serán otorgados en base al streaming de activos en los que participen.
+
+El cliente de mineria deberá estar embebido en la aplicación de reproducción, así los usuarios podrán optar por prestar su ancho de banda y disco duro para hostear los archivos de los films y obtener film-coins. Estos mismos film-coins podrán ser utilizados para ver peliculas o incluso cambiarlos en algun exchange por fiat o alguna otra crypto-moneda.
+
+1 film-coin permitirá una reproducción (o ticket).
 
 ## Marketing
 
